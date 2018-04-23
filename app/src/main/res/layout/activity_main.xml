@@ -7,16 +7,34 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <android.support.v7.widget.ActionMenuView
+        android:id="@+id/main_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <com.arlib.floatingsearchview.FloatingSearchView
+            android:id="@+id/floating_search_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:floatingSearch_searchHint="My library"
+            app:floatingSearch_suggestionsListAnimDuration="250"
+            app:floatingSearch_showSearchKey="false"
+            app:floatingSearch_leftActionMode="showHamburger"
+            app:floatingSearch_dimBackground="false"
+            app:floatingSearch_close_search_on_keyboard_dismiss="true"/>
+    </android.support.v7.widget.ActionMenuView>
+
     <TextView
         android:id="@+id/message"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/activity_horizontal_margin"
-        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:text="@string/title_my_library"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_action_bar" />
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/navigation"
