@@ -3,27 +3,37 @@ package com.example.johar.newsnailreader
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.design.widget.NavigationView
+import android.support.v4.app.Fragment
 import android.support.v4.view.GravityCompat
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import com.example.johar.newsnailreader.fragments.categoris
+import com.example.johar.newsnailreader.fragments.features
+import com.example.johar.newsnailreader.fragments.myLibrary
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
 
     private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
+        val fragment: Fragment
         when (item.itemId) {
             R.id.navigation_my_library -> {
-//                message.setText(R.string.title_my_library)
+                fragment = myLibrary()
+                loadFragment(fragment)
+
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_features -> {
-//                message.setText(R.string.title_features)
+
+                fragment = features()
+                loadFragment(fragment)
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_categories -> {
-//                message.setText(R.string.title_categories)
+                fragment = categoris()
+                loadFragment(fragment)
                 return@OnNavigationItemSelectedListener true
             }
         }
@@ -90,4 +100,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         return true
     }
 
+    fun loadFragment(fragment: Fragment){
+        val transaction = supportFragmentManager.beginTransaction()
+        transaction.replace(R.id.frame_container, fragment)
+        transaction.addToBackStack(null)
+        transaction.commit()
+
+    }
 }
