@@ -23,11 +23,18 @@
             android:id="@+id/floating_search_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:floatingSearch_searchHint="My library"
+            app:floatingSearch_leftActionColor="?attr/colorPrimary"
+            app:floatingSearch_hintTextColor="@color/md_blue_grey_200"
+            app:floatingSearch_searchBarMarginLeft="@dimen/mini_padding_margin"
+            app:floatingSearch_searchBarMarginRight="@dimen/mini_padding_margin"
+            app:floatingSearch_searchBarMarginTop="@dimen/mini_padding_margin"
+            app:floatingSearch_searchHint="Searching in library ... "
             app:floatingSearch_suggestionsListAnimDuration="250"
             app:floatingSearch_showSearchKey="false"
             app:floatingSearch_leftActionMode="showHamburger"
             app:floatingSearch_dimBackground="false"
+            app:floatingSearch_menu="@menu/search_menu"
+            app:floatingSearch_menuItemIconColor="?attr/colorPrimary"
             app:floatingSearch_close_search_on_keyboard_dismiss="true"/>
     </android.support.v7.widget.ActionMenuView>
 
