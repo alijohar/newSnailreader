@@ -2,26 +2,49 @@ package com.example.johar.newsnailreader
 
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
+import android.support.design.widget.NavigationView
+import android.support.v4.app.Fragment
+import android.support.v4.view.GravityCompat
 import android.support.v7.app.AppCompatActivity
+<<<<<<< HEAD
 import android.widget.ListView
+=======
+import android.view.Menu
+import android.view.MenuItem
+import com.example.johar.newsnailreader.fragments.categoris
+import com.example.johar.newsnailreader.fragments.features
+import com.example.johar.newsnailreader.fragments.myLibrary
+>>>>>>> 502414a272a7410d7bd158f512bd518c3ff4f321
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.list_view.*
 
+<<<<<<< HEAD
 class MainActivity : AppCompatActivity() {
     var itemList= ArrayList<Book>()
     var transfer : Adapter? = null
+=======
+class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
+
+
+>>>>>>> 502414a272a7410d7bd158f512bd518c3ff4f321
     private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
+        val fragment: Fragment
         when (item.itemId) {
             R.id.navigation_my_library -> {
-                message.setText(R.string.title_my_library)
+                fragment = myLibrary()
+                loadFragment(fragment)
+
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_features -> {
-                message.setText(R.string.title_features)
+
+                fragment = features()
+                loadFragment(fragment)
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_categories -> {
-                message.setText(R.string.title_categories)
+                fragment = categoris()
+                loadFragment(fragment)
                 return@OnNavigationItemSelectedListener true
             }
         }
@@ -35,8 +58,62 @@ class MainActivity : AppCompatActivity() {
         listView.adapter = transfer
         infoBook()
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
+        floating_search_view.attachNavigationDrawerToMenuButton(drawer_layout)
+
     }
 
+    override fun onBackPressed() {
+        if (drawer_layout.isDrawerOpen(GravityCompat.START)) {
+            drawer_layout.closeDrawer(GravityCompat.START)
+        } else {
+            super.onBackPressed()
+        }
+    }
+
+//    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+//        // Inflate the menu; this adds items to the action bar if it is present.
+//        menuInflater.inflate(R.menu.main, menu)
+//        return true
+//    }
+
+//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+//        // Handle action bar item clicks here. The action bar will
+//        // automatically handle clicks on the Home/Up button, so long
+//        // as you specify a parent activity in AndroidManifest.xml.
+//        when (item.itemId) {
+//            R.id.action_settings -> return true
+//            else -> return super.onOptionsItemSelected(item)
+//        }
+//    }
+
+    override fun onNavigationItemSelected(item: MenuItem): Boolean {
+
+        when (item.itemId) {
+            R.id.nav_camera -> {
+                // Handle the camera action
+            }
+            R.id.nav_gallery -> {
+
+            }
+            R.id.nav_slideshow -> {
+
+            }
+            R.id.nav_manage -> {
+
+            }
+            R.id.nav_share -> {
+
+            }
+            R.id.nav_send -> {
+
+            }
+        }
+
+        drawer_layout.closeDrawer(GravityCompat.START)
+        return true
+    }
+
+<<<<<<< HEAD
 
     fun infoBook(){
 
@@ -50,4 +127,13 @@ class MainActivity : AppCompatActivity() {
 
 
 
+=======
+    fun loadFragment(fragment: Fragment){
+        val transaction = supportFragmentManager.beginTransaction()
+        transaction.replace(R.id.frame_container, fragment)
+        transaction.addToBackStack(null)
+        transaction.commit()
+
+    }
+>>>>>>> 502414a272a7410d7bd158f512bd518c3ff4f321
 }
