@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout
+    android:id="@+id/itemView"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:layout_margin="120dp"
+    android:rowCount="2"
+    android:columnCount="1"
+    android:orientation="horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="130dp"
+        android:layout_height="170dp"
+        android:layout_margin="20dp"
+        android:layout_gravity="center"
+        android:background="@color/md_grey_300"
+
+        />
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="130dp"
+        android:layout_height="20dp"
+        android:layout_margin="20dp"
+        android:text="learning"/>
+
+    <TextView
+        android:layout_rowSpan="12"
+        android:layout_columnSpan="12"
+        android:id="@+id/description"
+        android:layout_margin="20dp"
+        android:text="learning"
+        />
+
+
+
+
+
+
+
+</GridLayout>
