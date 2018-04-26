@@ -115,17 +115,17 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
 <<<<<<< HEAD
 
+
+
     fun infoBook(){
 
-        itemList.add(Book(R.color.abc_btn_colored_text_material, "Learning Adobe XD","Learning Adobe XD"))
-        itemList.add(Book(R.color.abc_btn_colored_text_material, "Learning Adobe XD","Learning Adobe XD"))
-        itemList.add(Book(R.color.abc_btn_colored_text_material, "Learning Adobe XD","Learning Adobe XD"))
-        itemList.add(Book(R.color.abc_btn_colored_text_material, "Learning Adobe XD","Learning Adobe XD"))
-        itemList.add(Book(R.color.abc_btn_colored_text_material, "Learning Adobe XD","Learning Adobe XD"))
+        itemList.add(Book(R.drawable.children_bookcover, "Learning Adobe XD","Learning Adobe XD"))
+        itemList.add(Book(R.drawable.how_to_book_cover, "Learning Adobe XD","Learning Adobe XD"))
+        itemList.add(Book(R.drawable.children_bookcover, "Learning Adobe XD","Learning Adobe XD"))
+        itemList.add(Book(R.drawable.how_to_book_cover, "Learning Adobe XD","Learning Adobe XD"))
+        itemList.add(Book(R.drawable.children_bookcover, "Learning Adobe XD","Learning Adobe XD"))
 
     }
-
-
 
 =======
     fun loadFragment(fragment: Fragment){
