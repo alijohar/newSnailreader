@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout
+    android:id="@+id/itemview"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:rowCount="2"
+    android:columnCount="1"
+    android:layout_margin="20dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="130dp"
+        android:layout_height="170dp"
+        android:src="@drawable/children"
+        />
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="130dp"
+        android:layout_height="20dp"
+        android:text="learning"/>
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_height="20dp"
+        android:layout_width="130dp"
+        android:text="learning" />
+
+
+</GridLayout>

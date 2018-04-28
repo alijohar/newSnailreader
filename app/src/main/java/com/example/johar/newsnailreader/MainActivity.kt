@@ -6,15 +6,19 @@ import android.support.design.widget.NavigationView
 import android.support.v4.app.Fragment
 import android.support.v4.view.GravityCompat
 import android.support.v7.app.AppCompatActivity
+import android.widget.ListView
 import android.view.Menu
 import android.view.MenuItem
 import com.example.johar.newsnailreader.fragments.categoris
 import com.example.johar.newsnailreader.fragments.features
 import com.example.johar.newsnailreader.fragments.myLibrary
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.list_view.*
+
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
-
+    var itemList= ArrayList<Book>()
+    var transfer : Adapter? = null
 
     private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         val fragment: Fragment
@@ -43,10 +47,12 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
         floating_search_view.attachNavigationDrawerToMenuButton(drawer_layout)
 
+        transfer = Adapter(this, itemList)
+        listView.adapter = transfer
+        infoBook()
     }
 
     override fun onBackPressed() {
@@ -100,11 +106,21 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         return true
     }
 
+
+
+
+    fun infoBook(){
+        itemList.add(Book(R.drawable.children, "Learning Adobe XD","Learning Adobe XD"))
+        itemList.add(Book(R.drawable.book, "Learning Adobe XD","Learning Adobe XD"))
+        itemList.add(Book(R.drawable.children, "Learning Adobe XD","Learning Adobe XD"))
+        itemList.add(Book(R.drawable.book, "Learning Adobe XD","Learning Adobe XD"))
+        itemList.add(Book(R.drawable.children, "Learning Adobe XD","Learning Adobe XD"))
+    }
+
     fun loadFragment(fragment: Fragment){
         val transaction = supportFragmentManager.beginTransaction()
         transaction.replace(R.id.frame_container, fragment)
         transaction.addToBackStack(null)
         transaction.commit()
-
     }
 }
