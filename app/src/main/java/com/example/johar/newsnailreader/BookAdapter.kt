@@ -7,14 +7,13 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import kotlinx.android.synthetic.main.item_view.view.*
 
-class Adapter : BaseAdapter {
+class BookAdapter : BaseAdapter {
     var context: Context? = null
     var transfer = ArrayList<Book>()
 
     constructor(context: Context, transfer: ArrayList<Book>) {
         this.context = context
         this.transfer = transfer
-
     }
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {

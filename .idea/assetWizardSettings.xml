@@ -19,8 +19,8 @@
                                   <option name="values">
                                     <map>
                                       <entry key="assetType" value="IMAGE" />
-                                      <entry key="imageAsset" value="$PROJECT_DIR$/../children_bookcover.png" />
-                                      <entry key="outputName" value="children" />
+                                      <entry key="imageAsset" value="$PROJECT_DIR$/../book.jpg" />
+                                      <entry key="outputName" value="aa" />
                                     </map>
                                   </option>
                                 </PersistentState>

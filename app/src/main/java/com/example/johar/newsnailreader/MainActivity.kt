@@ -6,8 +6,6 @@ import android.support.design.widget.NavigationView
 import android.support.v4.app.Fragment
 import android.support.v4.view.GravityCompat
 import android.support.v7.app.AppCompatActivity
-import android.widget.ListView
-import android.view.Menu
 import android.view.MenuItem
 import com.example.johar.newsnailreader.fragments.categoris
 import com.example.johar.newsnailreader.fragments.features
@@ -18,7 +16,7 @@ import kotlinx.android.synthetic.main.list_view.*
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
     var itemList= ArrayList<Book>()
-    var transfer : Adapter? = null
+    var transfer : BookAdapter? = null
 
     private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         val fragment: Fragment
@@ -50,8 +48,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
         floating_search_view.attachNavigationDrawerToMenuButton(drawer_layout)
 
-        transfer = Adapter(this, itemList)
-        listView.adapter = transfer
+        transfer = BookAdapter(this, itemList)
+        booklistView.adapter = transfer
         infoBook()
     }
 
@@ -110,11 +108,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
 
     fun infoBook(){
-        itemList.add(Book(R.drawable.children, "Learning Adobe XD","Learning Adobe XD"))
-        itemList.add(Book(R.drawable.book, "Learning Adobe XD","Learning Adobe XD"))
-        itemList.add(Book(R.drawable.children, "Learning Adobe XD","Learning Adobe XD"))
-        itemList.add(Book(R.drawable.book, "Learning Adobe XD","Learning Adobe XD"))
-        itemList.add(Book(R.drawable.children, "Learning Adobe XD","Learning Adobe XD"))
+        itemList.add(Book(R.drawable.cover_book_test2, "Learning Adobe XD","Learning Adobe XD"))
+        itemList.add(Book(R.drawable.cover_book_test, "Learning Adobe XD","Learning Adobe XD"))
+        itemList.add(Book(R.drawable.cover_book_test2, "Learning Adobe XD","Learning Adobe XD"))
+        itemList.add(Book(R.drawable.cover_book_test, "Learning Adobe XD","Learning Adobe XD"))
+        itemList.add(Book(R.drawable.cover_book_test2, "Learning Adobe XD","Learning Adobe XD"))
     }
 
     fun loadFragment(fragment: Fragment){
