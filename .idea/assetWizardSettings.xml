@@ -19,8 +19,21 @@
                                   <option name="values">
                                     <map>
                                       <entry key="assetType" value="IMAGE" />
-                                      <entry key="imageAsset" value="$PROJECT_DIR$/../adaptive-web-bookcover-final-design.jpg" />
-                                      <entry key="outputName" value="a" />
+                                      <entry key="imageAsset" value="$PROJECT_DIR$/../children_bookcover.png" />
+                                      <entry key="outputName" value="children" />
+                                    </map>
+                                  </option>
+                                </PersistentState>
+                              </value>
+                            </entry>
+                            <entry key="launcherLegacy">
+                              <value>
+                                <PersistentState>
+                                  <option name="values">
+                                    <map>
+                                      <entry key="assetType" value="IMAGE" />
+                                      <entry key="imageAsset" value="$PROJECT_DIR$/../how-to-book-cover.jpg" />
+                                      <entry key="outputName" value="book" />
                                     </map>
                                   </option>
                                 </PersistentState>

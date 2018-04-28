@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<GridLayout
     android:id="@+id/itemview"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:orientation="vertical"
+    android:orientation="horizontal"
+    android:rowCount="2"
+    android:columnCount="1"
+    android:layout_margin="20dp"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="130dp"
         android:layout_height="170dp"
-        android:background="@color/md_grey_300"
+        android:src="@drawable/children"
         />
     <TextView
         android:id="@+id/title"
@@ -25,4 +28,4 @@
         android:text="learning" />
 
 
-</LinearLayout>
+</GridLayout>
