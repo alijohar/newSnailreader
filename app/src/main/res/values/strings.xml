@@ -5,10 +5,10 @@
     <string name="title_categories">Categories</string>
     <string name="textview">TextView</string>
     <string name="todo">TODO</string>
-=======
+    =======
     <string name="voice_searching">voice searching</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
->>>>>>> 502414a272a7410d7bd158f512bd518c3ff4f321
+    >>>>>>> 502414a272a7410d7bd158f512bd518c3ff4f321
 </resources>

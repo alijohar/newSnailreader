@@ -11,7 +11,7 @@ import com.example.johar.newsnailreader.fragments.categoris
 import com.example.johar.newsnailreader.fragments.features
 import com.example.johar.newsnailreader.fragments.myLibrary
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.list_view.*
+import kotlinx.android.synthetic.main.book_list_view.*
 
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         floating_search_view.attachNavigationDrawerToMenuButton(drawer_layout)
 
         transfer = BookAdapter(this, itemList)
-        booklistView.adapter = transfer
+        bookListView.adapter = transfer
         infoBook()
     }
 
