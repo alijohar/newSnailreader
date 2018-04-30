@@ -15,8 +15,8 @@ import kotlinx.android.synthetic.main.book_list_view.*
 
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
-    var itemList= ArrayList<Book>()
-    var transfer : BookAdapter? = null
+    var itemList = ArrayList<Book>()
+    var transfer: BookAdapter? = null
 
     private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         val fragment: Fragment
@@ -105,17 +105,15 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
 
-
-
-    fun loadInfoBook(){
-        itemList.add(Book(R.drawable.cover_book_test2, "Learning Adobe XD","Learning Adobe XD"))
-        itemList.add(Book(R.drawable.cover_book_test, "Learning Adobe XD","Learning Adobe XD"))
-        itemList.add(Book(R.drawable.cover_book_test2, "Learning Adobe XD","Learning Adobe XD"))
-        itemList.add(Book(R.drawable.cover_book_test, "Learning Adobe XD","Learning Adobe XD"))
-        itemList.add(Book(R.drawable.cover_book_test2, "Learning Adobe XD","Learning Adobe XD"))
+    fun loadInfoBook() {
+        itemList.add(Book(R.drawable.cover_book_test2, "Learning Adobe XD", "Learning Adobe XD"))
+        itemList.add(Book(R.drawable.cover_book_test, "Learning Adobe XD", "Learning Adobe XD"))
+        itemList.add(Book(R.drawable.cover_book_test2, "Learning Adobe XD", "Learning Adobe XD"))
+        itemList.add(Book(R.drawable.cover_book_test, "Learning Adobe XD", "Learning Adobe XD"))
+        itemList.add(Book(R.drawable.cover_book_test2, "Learning Adobe XD", "Learning Adobe XD"))
     }
 
-    fun loadFragment(fragment: Fragment){
+    fun loadFragment(fragment: Fragment) {
         val transaction = supportFragmentManager.beginTransaction()
         transaction.replace(R.id.frame_container, fragment)
         transaction.addToBackStack(null)
