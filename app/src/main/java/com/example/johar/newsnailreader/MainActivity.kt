@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         transfer = BookAdapter(this, itemList)
         bookListView.adapter = transfer
-        infoBook()
+        loadInfoBook()
     }
 
     override fun onBackPressed() {
@@ -107,7 +107,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
 
 
-    fun infoBook(){
+    fun loadInfoBook(){
         itemList.add(Book(R.drawable.cover_book_test2, "Learning Adobe XD","Learning Adobe XD"))
         itemList.add(Book(R.drawable.cover_book_test, "Learning Adobe XD","Learning Adobe XD"))
         itemList.add(Book(R.drawable.cover_book_test2, "Learning Adobe XD","Learning Adobe XD"))
