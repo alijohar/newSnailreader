@@ -3,9 +3,9 @@
     android:id="@+id/bookItemView"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:orientation="horizontal"
-    android:rowCount="2"
-    android:columnCount="1"
+    android:orientation="vertical"
+    android:rowCount="3"
+    android:columnCount="2"
     android:layout_margin="20dp"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
