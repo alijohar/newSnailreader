@@ -4,12 +4,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragments.myLibrary"
-    android:background="@color/md_red_400">
+    >
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <GridView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/gridView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/title_my_library" />
+        android:layout_margin="20dp"
+        android:columnWidth="150dp"
+        android:gravity="center"
+        android:horizontalSpacing="20dp"
+        android:numColumns="auto_fit"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="15dp"
+        app:layout_goneMarginLeft="20dp"/>
 
 </FrameLayout>

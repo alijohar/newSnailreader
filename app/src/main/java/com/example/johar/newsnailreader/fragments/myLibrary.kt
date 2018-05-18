@@ -7,6 +7,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.johar.newsnailreader.R
+import com.example.papyrus.gridlayout.BookMyLibrary
+import com.example.papyrus.gridlayout.BookMyLibraryAdapter
+import kotlinx.android.synthetic.main.fragment_my_library.*
 
 
 // TODO: Rename parameter arguments, choose names that match
@@ -19,11 +22,34 @@ private const val ARG_PARAM2 = "param2"
  *
  */
 class myLibrary : Fragment() {
+    var infoBook = ArrayList<BookMyLibrary>()
+    var transferInfoBook: BookMyLibraryAdapter? = null
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_my_library, container, false)
+    }
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        transferInfoBook = BookMyLibraryAdapter(context, infoBook)
+        gridView.adapter = transferInfoBook
+        loadInfoBook()
+    }
+
+    fun loadInfoBook() {
+        infoBook.add(BookMyLibrary(R.drawable.cover_book_test, "Learning Adobe XD", "Learning Adobe XD"))
+        infoBook.add(BookMyLibrary(R.drawable.cover_book_test2, "Learning Adobe XD", "Learning Adobe XD"))
+        infoBook.add(BookMyLibrary(R.drawable.cover_book_test3, "Learning Adobe XD", "Learning Adobe XD"))
+        infoBook.add(BookMyLibrary(R.drawable.cover_book_test, "Learning Adobe XD", "Learning Adobe XD"))
+        infoBook.add(BookMyLibrary(R.drawable.cover_book_test2, "Learning Adobe XD", "Learning Adobe XD"))
+        infoBook.add(BookMyLibrary(R.drawable.cover_book_test3, "Learning Adobe XD", "Learning Adobe XD"))
+        infoBook.add(BookMyLibrary(R.drawable.cover_book_test, "Learning Adobe XD", "Learning Adobe XD"))
+        infoBook.add(BookMyLibrary(R.drawable.cover_book_test2, "Learning Adobe XD", "Learning Adobe XD"))
+        infoBook.add(BookMyLibrary(R.drawable.cover_book_test3, "Learning Adobe XD", "Learning Adobe XD"))
+        infoBook.add(BookMyLibrary(R.drawable.cover_book_test, "Learning Adobe XD", "Learning Adobe XD"))
+        infoBook.add(BookMyLibrary(R.drawable.cover_book_test2, "Learning Adobe XD", "Learning Adobe XD"))
     }
 
 

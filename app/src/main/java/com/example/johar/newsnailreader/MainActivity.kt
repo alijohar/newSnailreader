@@ -11,12 +11,11 @@ import com.example.johar.newsnailreader.fragments.categoris
 import com.example.johar.newsnailreader.fragments.features
 import com.example.johar.newsnailreader.fragments.myLibrary
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.book_list_view.*
+import kotlinx.android.synthetic.main.fragment_my_library.*
 
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
-    var itemList = ArrayList<Book>()
-    var transfer: BookAdapter? = null
+
 
     private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         val fragment: Fragment
@@ -48,9 +47,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
         floating_search_view.attachNavigationDrawerToMenuButton(drawer_layout)
 
-        transfer = BookAdapter(this, itemList)
-        bookListView.adapter = transfer
-        loadInfoBook()
+
     }
 
     override fun onBackPressed() {
@@ -104,14 +101,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         return true
     }
 
-
-    fun loadInfoBook() {
-        itemList.add(Book(R.drawable.cover_book_test2, "Learning Adobe XD", "Learning Adobe XD"))
-        itemList.add(Book(R.drawable.cover_book_test, "Learning Adobe XD", "Learning Adobe XD"))
-        itemList.add(Book(R.drawable.cover_book_test2, "Learning Adobe XD", "Learning Adobe XD"))
-        itemList.add(Book(R.drawable.cover_book_test, "Learning Adobe XD", "Learning Adobe XD"))
-        itemList.add(Book(R.drawable.cover_book_test2, "Learning Adobe XD", "Learning Adobe XD"))
-    }
 
     fun loadFragment(fragment: Fragment) {
         val transaction = supportFragmentManager.beginTransaction()
