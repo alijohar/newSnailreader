@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="100dp"
+    android:layout_marginTop="?attr/actionBarSize"
+    android:layout_marginBottom="?attr/actionBarSize"
     tools:context=".fragments.myLibrary">
 
     <!-- TODO: Update blank fragment layout -->
@@ -12,15 +13,11 @@
         android:id="@+id/gridView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="5dp"
-        android:columnWidth="150dp"
-        android:gravity="center"
-        android:horizontalSpacing="20dp"
+        android:layout_gravity="center"
+        android:verticalSpacing="@dimen/standard_padding_margin"
         android:numColumns="auto_fit"
         android:stretchMode="columnWidth"
-        android:verticalSpacing="15dp"
-        app:layout_goneMarginLeft="20dp" />
+        android:paddingTop="@dimen/standard_padding_margin"
+        android:paddingBottom="@dimen/standard_padding_margin"/>
 
 </FrameLayout>
