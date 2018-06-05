@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="100dp"
+    android:layout_marginTop="60dp"
     tools:context=".fragments.features">
 
     <!-- TODO: Update blank fragment layout -->
@@ -12,43 +12,33 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <LinearLayout
-            android:id="@+id/mostDownloaded"
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="40dp"
             android:layout_margin="5dp"
-            android:orientation="horizontal">
+            >
 
             <TextView
-                android:layout_width="0dp"
+                android:layout_width="150dp"
                 android:layout_height="match_parent"
-                android:layout_weight="2"
+                android:layout_gravity="start"
+                android:gravity="center_vertical"
                 android:text="Most downloaded"
                 android:textColor="@color/md_black_1000"
                 android:textSize="17dp" />
 
-            <TextView
-                android:layout_width="0dp"
+            <Button
+                android:layout_width="70dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-
+                android:layout_gravity="end"
+                android:text="more"
+                android:background="@color/md_white_1000"
+                android:gravity="center_vertical"
                 />
 
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:clickable="true"
-                android:gravity="center"
-                android:text="More"
-                android:textColor="@color/md_orange_500"
-                android:textSize="17dp"
+        </FrameLayout>
 
-                />
-
-
-        </LinearLayout>
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/bookRecyclerView"
@@ -61,42 +51,33 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp" />
-
-        <LinearLayout
-            android:id="@+id/mostDownlo3aded"
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:layout_margin="5dp"
-            android:orientation="horizontal">
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            >
 
             <TextView
-                android:layout_width="0dp"
+                android:layout_width="150dp"
                 android:layout_height="match_parent"
-                android:layout_weight="2"
+                android:layout_gravity="start"
+                android:gravity="center_vertical"
                 android:text="Most downloaded"
                 android:textColor="@color/md_black_1000"
                 android:textSize="17dp" />
 
-            <TextView
-                android:layout_width="0dp"
+            <Button
+                android:layout_width="70dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_gravity="end"
+                android:text="more"
+                android:gravity="center_vertical"
+                android:background="@color/md_white_1000"
 
                 />
 
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:clickable="true"
-                android:gravity="center"
-                android:text="More"
-                android:textColor="@color/md_orange_500"
-                android:textSize="17dp" />
-
-
-        </LinearLayout>
+        </FrameLayout>
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/bookRecyclerView2"
