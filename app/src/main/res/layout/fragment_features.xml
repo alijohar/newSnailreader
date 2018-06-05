@@ -6,83 +6,101 @@
     android:layout_marginTop="60dp"
     tools:context=".fragments.features">
 
-    <!-- TODO: Update blank fragment layout -->
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="?attr/actionBarSize">
 
-        <FrameLayout
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_margin="5dp"
-            >
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/mini_padding_margin"
+            android:orientation="vertical">
 
-            <TextView
-                android:layout_width="150dp"
-                android:layout_height="match_parent"
-                android:layout_gravity="start"
-                android:gravity="center_vertical"
-                android:text="Most downloaded"
-                android:textColor="@color/md_black_1000"
-                android:textSize="17dp" />
 
-            <Button
-                android:layout_width="70dp"
+            <!--RecyclerView#1-->
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="end"
-                android:text="more"
-                android:background="@color/md_white_1000"
-                android:gravity="center_vertical"
-                />
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Most downloaded"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/transparent"
+                        android:text="more"
+                        android:textColor="?attr/colorAccent"
+
+                        />
+                </LinearLayout>
 
 
-        </FrameLayout>
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/bookRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
 
+            </LinearLayout>
 
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/bookRecyclerView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp" />
-
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/banerRecyclerView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp" />
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_margin="10dp"
-            >
-
-            <TextView
-                android:layout_width="150dp"
-                android:layout_height="match_parent"
-                android:layout_gravity="start"
-                android:gravity="center_vertical"
-                android:text="Most downloaded"
-                android:textColor="@color/md_black_1000"
-                android:textSize="17dp" />
-
-            <Button
-                android:layout_width="70dp"
+            <!--RecyclerView#2-->
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/banerRecyclerView"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="end"
-                android:text="more"
-                android:gravity="center_vertical"
-                android:background="@color/md_white_1000"
-
-                />
+                android:layout_marginTop="@dimen/standard_padding_margin" />
 
 
-        </FrameLayout>
+            <!--RecyclerView#3-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/standard_padding_margin"
+                android:orientation="vertical">
 
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/bookRecyclerView2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp" />
-    </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Most downloaded"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/transparent"
+                        android:text="more"
+                        android:textColor="?attr/colorAccent"
+
+                        />
+                </LinearLayout>
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/bookRecyclerView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
 </FrameLayout>
