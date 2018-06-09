@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="60dp"
+    android:layout_marginTop="?attr/actionBarSize"
     tools:context=".fragments.features">
 
     <ScrollView
@@ -35,7 +35,8 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Most downloaded"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                        />
 
                     <Button
                         android:layout_width="wrap_content"
@@ -43,6 +44,7 @@
                         android:background="@color/transparent"
                         android:text="more"
                         android:textColor="?attr/colorAccent"
+
 
                         />
                 </LinearLayout>
@@ -60,14 +62,14 @@
                 android:id="@+id/banerRecyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/standard_padding_margin" />
+                android:layout_marginTop="@dimen/mini_padding_margin" />
 
 
             <!--RecyclerView#3-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/standard_padding_margin"
+                android:layout_marginTop="@dimen/mini_padding_margin"
                 android:orientation="vertical">
 
                 <LinearLayout
@@ -79,8 +81,9 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Most downloaded"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+                        android:text="Recently added"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                        />
 
                     <Button
                         android:layout_width="wrap_content"
